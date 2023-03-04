@@ -11,7 +11,7 @@ const Fetch = (props) => {
 
     useEffect(() => {
         const fetchAPI = async () => {
-            const response = await (await fetch(`http://www.omdbapi.com/?apikey=${apikey}&s=${props.fetchInput}`)).json();
+            const response = await (await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${props.fetchInput}`)).json();
 
             console.log(response);
             if(response['Response'] === "False") {
